@@ -1,6 +1,6 @@
 name: test3_container-dev_app_b316e00_env_424084b Pipeline (Skyu Generated)
 'on':
-  push:
+  schedule:
     branches:
       - master
     paths-ignore:
