@@ -1,6 +1,6 @@
 name: new-one_container-dev_app_57382b2_env_424084b Pipeline (Skyu Generated)
 'on':
-  push:
+  schedule:
     branches:
       - master
     paths-ignore:
