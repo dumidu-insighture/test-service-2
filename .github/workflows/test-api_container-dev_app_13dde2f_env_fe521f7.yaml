@@ -7,6 +7,7 @@ name: test-api_container-dev_app_13dde2f_env_fe521f7 Pipeline (Skyu Generated)
   repository_dispatch:
     types: pipeline_e1057b9d-9cba-44e7-b596-614d8481cded
 env:
+  '2345': '1234567'
   ENCODED_PIPELINE_SECRET: ${{secrets.TESTSERVICE2_TESTAPI_CONTAINERDEV_APP_13DDE2F_ENV_FE521F7}}
   COMMIT_ID: ${{github.event.client_payload.commitId || github.sha || github.run_id}}
   BRANCH_NAME: >-
@@ -458,7 +459,7 @@ jobs:
         run: docker push ${{ env.IMAGE_NAME }}:${{ env.COMMIT_ID }}
         if: ${{ env.STEPS_CAN_PROCEED == 'true' }}
     outputs:
-      stepsCanProceed: ${ env.STEPS_CAN_PROCEED }
+      stepsCanProceed: ${{ env.STEPS_CAN_PROCEED }}
   _status-success:
     name: ' Status Success'
     permissions: write-all
