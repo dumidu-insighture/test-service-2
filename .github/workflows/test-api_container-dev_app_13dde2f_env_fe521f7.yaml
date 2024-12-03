@@ -1,5 +1,8 @@
 name: test-api_container-dev_app_13dde2f_env_fe521f7 Pipeline (Skyu Generated)
 'on':
+  push:
+    paths:
+      - .github/*
   workflow_dispatch: {}
   repository_dispatch:
     types: pipeline_e1057b9d-9cba-44e7-b596-614d8481cded
