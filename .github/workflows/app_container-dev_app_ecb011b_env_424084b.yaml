@@ -18,6 +18,7 @@ env:
     ${{github.event.client_payload.branchName || github.event.branch ||
     github.ref_name}}
   DEPLOY_STEP_SHOULD_DEPLOY: 'true'
+  nnj: '67'
 jobs:
   code-scan:
     name: Code Scan
@@ -711,3 +712,5 @@ jobs:
                 exit 1
               fi
             
+      - name: Temp Custom Step
+        run: echo "your command here"
