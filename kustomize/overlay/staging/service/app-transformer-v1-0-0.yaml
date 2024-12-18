@@ -1,0 +1,46 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |
+      exec:
+        path: skyu-app-transformer
+spec:
+  applicationContainers:
+    - imageTag: latest
+      cpuRequestMili: 100
+      cpuLimitMili: 150
+      memoryRequestMb: 350
+      memoryLimitMb: 450
+      args: []
+      command: []
+      configMounts: []
+      applicationPorts: []
+      healthChecks: []
+      name: service-main
+      imagePullPolicy: Always
+      imageRegistry: docker.io/service
+      imagePullSecretName: imagepull-docker
+      credentialId: credential_5d88866e-46c9-4a4a-8365-841384f8015f
+  minReplicas: 1
+  maxReplicas: 1
+  terminationGracePeriodSeconds: 60
+  nodeSelector: {}
+  suspend: false
+  ttlSecondsAfterFinished: 0
+  labels:
+    app: service
+    version: v1.0.0
+    applicationId: app_4eea145f-a415-42b3-b547-c799bf9f1d7b
+    projectId: project_0309f1f1-c4c6-469b-a720-eb309d881539
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    environmentId: env_67745322-bf4d-4292-a959-26fe932086e2
+    environmentName: staging
+  horizontalAutoScalingRules: []
+  volumes: []
+  type: Deployment
+  name: service
+  serviceType: ClusterIP
+  version: v1.0.0
+  namespace: infra-repo-staging
