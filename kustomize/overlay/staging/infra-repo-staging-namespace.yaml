@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: infra-repo-staging
+  labels:
+    environmentId: env_67745322-bf4d-4292-a959-26fe932086e2
+    projectId: project_0309f1f1-c4c6-469b-a720-eb309d881539
+    projectName: infra-repo
+    environmentName: staging
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016

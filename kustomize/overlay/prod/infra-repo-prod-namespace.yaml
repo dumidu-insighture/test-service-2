@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: infra-repo-prod
+  labels:
+    environmentId: env_90fdf6ce-b625-49a1-8a38-576b15ed7fa8
+    projectId: project_0309f1f1-c4c6-469b-a720-eb309d881539
+    projectName: infra-repo
+    environmentName: prod
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
