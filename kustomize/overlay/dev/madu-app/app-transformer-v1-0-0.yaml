@@ -1,0 +1,46 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |
+      exec:
+        path: skyu-app-transformer
+spec:
+  applicationContainers:
+    - imageTag: latest
+      cpuRequestMili: 100
+      cpuLimitMili: 150
+      memoryRequestMb: 350
+      memoryLimitMb: 450
+      args: []
+      command: []
+      configMounts: []
+      applicationPorts: []
+      healthChecks: []
+      name: madu-app-main
+      imagePullPolicy: Always
+      imageRegistry: docker.io/madu-app
+      imagePullSecretName: imagepull-docker
+      credentialId: credential_17c7b875-1253-4dcd-98f7-964cd9eb4c31
+  minReplicas: 1
+  maxReplicas: 1
+  terminationGracePeriodSeconds: 60
+  nodeSelector: {}
+  suspend: false
+  ttlSecondsAfterFinished: 0
+  labels:
+    app: madu-app
+    version: v1.0.0
+    applicationId: app_435452ae-d3cb-4e67-b2b9-23de6a297cdc
+    projectId: project_012391f9-44e2-4a57-9c81-c43aa22fd7c3
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    environmentId: env_3eb119c8-a7dd-45d8-bc5c-ef51815116ab
+    environmentName: dev
+  horizontalAutoScalingRules: []
+  volumes: []
+  type: Deployment
+  name: madu-app
+  serviceType: ClusterIP
+  version: v1.0.0
+  namespace: madu-test-dev

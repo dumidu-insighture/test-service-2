@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app: madu-app-v1-0-0
+    applicationId: app_435452ae-d3cb-4e67-b2b9-23de6a297cdc
+    version: v1.0.0
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
+    projectId: project_012391f9-44e2-4a57-9c81-c43aa22fd7c3
+    environmentId: env_b4b1f42a-7158-4f6f-847f-6ce647139ea1
+  name: madu-app-v1-0-0
+spec:
+  selector:
+    app: madu-app-v1-0-0
