@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: madu-test-prod
+  labels:
+    environmentId: env_0cfc03c4-00a3-4226-a9a4-5507d6db1c27
+    projectId: project_012391f9-44e2-4a57-9c81-c43aa22fd7c3
+    projectName: madu-test
+    environmentName: prod
+    organizationId: org_6de1b366-9da6-4d55-b363-f5a2c4382016
