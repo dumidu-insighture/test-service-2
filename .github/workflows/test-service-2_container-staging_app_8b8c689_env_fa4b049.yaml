@@ -2,15 +2,6 @@ name: >-
   test-service-2_container-staging_app_8b8c689_env_fa4b049 Pipeline (Skyu
   Generated)
 'on':
-  push:
-    branches:
-      - staging
-      - release/*
-    paths-ignore:
-      - .github/workflows/**
-      - .trivyignore
-      - Readme.md
-      - README.md
   workflow_dispatch: {}
   repository_dispatch:
     types: pipeline_b3e1ec3b-0477-46ee-a464-a8ad0e86be07
