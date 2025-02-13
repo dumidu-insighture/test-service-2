@@ -28,7 +28,7 @@ jobs:
         if: >-
           ${{ github.event.client_payload.commitId != null ||
           github.event.client_payload.branchName != null }}
-        run: |2-
+        run: 
 
               echo "Starting the checkout process..."
               git fetch --all
